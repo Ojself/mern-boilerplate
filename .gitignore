@@ -5,9 +5,7 @@ node_modules/
 .pnp.js
 
 # production
-/build
-build/
-build
+/client/build
 
 # misc
 .DS_Store

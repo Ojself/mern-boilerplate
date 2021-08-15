@@ -1,9 +1,6 @@
 import { SET_GLOBALMESSAGE, REMOVE_GLOBALMESSAGE } from "../actions/types";
 
-const reducer = (
-  state = { style: "danger", message: "", timeoutId: null },
-  action
-) => {
+const reducer = (state = { style: "danger", message: "" }, action) => {
   if (state.timeoutId) clearTimeout(state.timeoutId);
 
   switch (action.type) {

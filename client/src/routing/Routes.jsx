@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Dashboard from "../components/screens/Dashboard";
+import Dashboard from "../views/Dashboard";
 import PrivateRoute from "./PrivateRoute";
-import Countries from "../components/screens/Countries";
-import Country from "../components/screens/Country";
-import Addcountry from "../components/screens/Addcountry";
+import Countries from "../views/Countries";
+import Country from "../views/Country";
+import Addcountry from "../views/Addcountry";
 import NotFound from "../components/layout/NotFound";
 
 const Routes = () => {

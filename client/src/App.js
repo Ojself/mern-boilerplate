@@ -4,7 +4,7 @@ import "./index.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import GlobalMessage from "./components/layout/GlobalMessage";
-import Landing from "./components/screens/Landing";
+import Landing from "./views/Landing";
 import Routes from "./routing/Routes";
 import store from "./state/store";
 import { loadAccount } from "./state/actions/auth";

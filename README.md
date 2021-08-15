@@ -25,9 +25,9 @@ Click on the button [_Use this template_](https://github.com/Ojself/mern-boilerp
 
 Clone the project directly and remove the git folder.
 Fork the project through `github.com`
-$ git clone https://github.com/Ojself/mern-boilerplate
 
 ```sh
+$ git clone https://github.com/Ojself/mern-boilerplate
 $ cd mern-boilerplate
 
 # remove the .git folder

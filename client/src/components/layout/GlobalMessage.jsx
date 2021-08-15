@@ -6,7 +6,7 @@ const GlobalMessage = () => {
   const visibility = !!globalMessage?.message ? "visible" : "invisible";
   return (
     <div>
-      <p className={`${visibility} text-red-600`}>
+      <p className={`${visibility} text-${globalMessage.style}`}>
         {globalMessage?.message || "-"}
       </p>
     </div>

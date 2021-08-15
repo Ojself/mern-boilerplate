@@ -1,9 +1,9 @@
 import React from "react";
-import EmailPasswordForm from "../molecules/EmailPasswordForm";
+import EmailPasswordForm from "../components/molecules/EmailPasswordForm";
 import { Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
-import { actionCreators } from "../../state/index";
+import { actionCreators } from "../state/index";
 
 const Landing = () => {
   const dispatch = useDispatch();

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import api from "../../api";
+import api from "../api";
 import { useDispatch } from "react-redux";
-import errorHandler from "../../utils/errorHandler";
+import errorHandler from "../utils/errorHandler";
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);

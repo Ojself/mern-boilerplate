@@ -1,9 +1,11 @@
 import React from "react";
-import api from "../../api";
+import api from "../api";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
-import Button from "../atoms/Button";
-import { CustomFormErrorMessage } from "../atoms/CustomFormErrorMessage";
+import Button from "../components/atoms/Button";
+import { CustomFormErrorMessage } from "../components/atoms/CustomFormErrorMessage";
+import { useDispatch } from "react-redux";
+import { errorHandler, globalMessageHandler } from "../utils/index";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -24,10 +26,14 @@ const validationSchema = Yup.object().shape({
 const fieldStyle = { border: "1px solid #C4C4C4" };
 
 const AddCountry = () => {
+  const dispatch = useDispatch();
   const handleSubmit = async (values) => {
     try {
-      await api.addCountry(values);
-    } catch (err) {}
+      const res = await api.addCountry(values);
+      globalMessageHandler(dispatch, res.message);
+    } catch (err) {
+      errorHandler(dispatch, err);
+    }
   };
   return (
     <main className='flex flex-col items-center'>
@@ -38,6 +44,7 @@ const AddCountry = () => {
             name: "",
             capital: "",
             desc: "",
+            area: "",
           }}
           validationSchema={validationSchema}
           onSubmit={(values) => {
@@ -81,7 +88,6 @@ const AddCountry = () => {
                 type='number'
                 style={fieldStyle}
                 className='h-10 mb-5 pl-2'
-                min='0'
                 name='area'
               />
               <CustomFormErrorMessage

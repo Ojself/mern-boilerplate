@@ -6,7 +6,7 @@ import { SET_GLOBALMESSAGE, REMOVE_GLOBALMESSAGE } from "./types";
  * @param {String} globalMessage.style - The style of the message (defaults to 'danger')}
  */
 
-export const setGlobalMessage = (globalMessage) => {
+export const setGlobalMessage = (globalMessage, x) => {
   return (dispatch) => {
     const timeoutId = setTimeout(() => {
       dispatch({

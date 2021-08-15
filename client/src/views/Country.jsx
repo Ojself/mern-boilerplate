@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import api from "../../api";
+import api from "../api";
 import { useDispatch } from "react-redux";
-import errorHandler from "../../utils/errorHandler";
+import errorHandler from "../utils/errorHandler";
 
 const Country = ({ match }) => {
   const countryName = match.params.name;

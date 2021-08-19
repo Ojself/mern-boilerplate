@@ -11,7 +11,7 @@ passport.use(
     },
     async (email, password, done) => {
       try {
-        const account = await Account.findOne({ email });
+        const account = await Account.findOne({ email }).lean();
 
         if (!account) {
           done(null, false, { message: "Incorrect email" });
